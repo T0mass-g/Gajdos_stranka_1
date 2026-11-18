@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+    --fialova: #d9c9ee;
+    --tmava: #40364a;
+    --pozadie: #fff9f5;
+    --zelena: #dcebe1;
+    --ruzova: #f2d3c3;
+}
+
+body {
+    margin: 0;
+    color: var(--tmava);
+    background-color: var(--pozadie);
+    font-family: "DM Sans", sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+a {
+    color: var(--tmava);
+}
+
+a:hover {
+    color: var(--fialova);
+}
+
+header {
+    display: flex;
+    background-color: var(--ruzova);
+    border-bottom: 3px solid var(--tmava);
+}
+
+.hlavicka__logo {
+    padding: 0 5%;
+}
+
+header nav {
+    display: flex;
+    margin: auto 0 auto auto;
+}
+
+header nav a {
+    padding: 1.5rem 3rem;
+    text-decoration: none;
+    border-left: 3px solid var(--tmava);
+}
+
+.uvod {
+    padding: 5rem 10%;
+}
+
+.uvod h2 {
+    font-size: 5rem;
+}
+
+.statistiky {
+    display: flex;
+    border: 3px solid var(--tmava);
+    margin: 3rem 0 5rem;
+}
+
+.statistiky div {
+    flex: 1;
+    padding: 1rem;
+}
+
+.statistiky div + div {
+    border-left: 3px solid var(--tmava);
+}
+
+.statistiky h3 {
+    font-size: 2rem;
+}
+
+.kurzy {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.kurzy section {
+    padding: 2rem;
+    border: 3px solid var(--tmava);
+    box-shadow: 8px 8px var(--tmava);
+    background-color: white;
+}
+
+.kurzy .kurzy__web {
+    background-color: var(--fialova);
+    grid-column: span 2;
+}
+
+.kurzy img {
+    width: 60px;
+}
+
+.kurzy h3 {
+    font-size: 2rem;
+}
+
+.kurzy a {
+    display: inline-block;
+    padding: 1rem;
+    background-color: var(--ruzova);
+    border: 3px solid var(--tmava);
+    text-decoration: none;
+}
+
+.kurzy__python a {
+    background-color: var(--tmava);
+    color: white;
+}
+
+.kurzy a:hover {
+    background-color: var(--fialova);
+    color: var(--tmava);
+}
+
+.postup {
+    padding: 4rem 10%;
+    background-color: var(--zelena);
+    border-top: 3px solid var(--tmava);
+    border-bottom: 3px solid var(--tmava);
+}
+
+.postup__kroky {
+    display: flex;
+    gap: 2rem;
+}
+
+.postup__kroky p {
+    flex: 1;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    background-color: var(--ruzova);
+}
+
+@media (max-width: 999px) {
+    header {
+        display: block;
+    }
+
+    .kurzy {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .kurzy__web {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 699px) {
+    header nav {
+        margin: 0;
+    }
+
+    header nav a {
+        padding: 1rem;
+    }
+
+    .uvod {
+        padding: 3rem 5%;
+    }
+
+    .uvod h2 {
+        font-size: 3rem;
+    }
+
+    .statistiky, .postup__kroky {
+        display: block;
+    }
+
+    .statistiky div + div {
+        border-left: 0;
+        border-top: 3px solid var(--tmava);
+    }
+
+    .kurzy {
+        grid-template-columns: 1fr;
+    }
+
+    .kurzy .kurzy__web {
+        grid-column: span 1;
+    }
+
+    footer {
+        display: block;
+    }
+}
